@@ -30,7 +30,10 @@ const Number = () => {
         }
     }
     useEffect(()=>{
-       
+        const fetchData = async () => {
+        const res = await fetch(`http://20.244.56.144/numbers/${type}`);
+        const d=res.json();
+        setData(d)
 
     },[])
   return (
